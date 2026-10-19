@@ -447,7 +447,7 @@ p{text-align:left;}
     </div>
 </div>
 
-<header>
+<header style="display:none;">
     <h1>学校法人理知の杜<br>理知の杜ビジネス専門学校<br>入学試験</h1>
 </header>
 
@@ -455,8 +455,7 @@ p{text-align:left;}
 <!-- =========================
      スタート画面
 ========================= -->
-
-<div id="startScreen" class="container">
+<div id="startScreen" class="container" style="display:none;">
 
     <div class="card">
 
@@ -777,22 +776,28 @@ const pool6 = [
 
 ];
 
-function checkPassword() {
-    const password =
-        document.getElementById("examPassword").value;
 
-    // ここでパスワードを設定します
+
+
+function checkPassword() {
+    const password = document.getElementById("examPassword").value;
     const correctPassword = "rbc20261";
 
     if (password === correctPassword) {
+        // パスワード画面を隠す
         document.getElementById("passwordScreen").style.display = "none";
+
+        // 学校名と受験者入力画面を表示する
+        document.querySelector("header").style.display = "block";
         document.getElementById("startScreen").style.display = "block";
+
     } else {
         document.getElementById("passwordError").style.display = "block";
         document.getElementById("examPassword").value = "";
         document.getElementById("examPassword").focus();
     }
 }
+
 
 
 /* ==================================================

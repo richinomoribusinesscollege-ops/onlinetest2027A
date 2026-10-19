@@ -17,11 +17,6 @@ header{
     padding:20px;
 }
 
-/* 最初は受験者情報の画面を隠す */
-#startScreen {
-    display: none;
-    text-align: center;
-}
 
 .container{
     width:900px;
@@ -45,6 +40,9 @@ h2{
 
 #startScreen{
     text-align:center;
+        display: none;
+    text-align: center;
+
 }
 
 #startScreen input{
@@ -323,4 +321,21 @@ h2{
         padding:30px 20px;
     }
 
+}
+
+
+/* パスワード確認前は、パスワード画面以外を非表示 */
+body:not(.password-checked) header,
+body:not(.password-checked) #startScreen,
+body:not(.password-checked) #examScreen,
+body:not(.password-checked) #resultScreen,
+body:not(.password-checked) #sendErrorScreen,
+body:not(.password-checked) #completeScreen,
+body:not(.password-checked) #warningScreen {
+    display: none !important;
+}
+
+/* パスワード画面を表示 */
+#passwordScreen {
+    display: block;
 }
