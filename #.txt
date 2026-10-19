@@ -1,0 +1,3 @@
+下記スプレッドシートに送信時、自動保存
+
+https://docs.google.com/spreadsheets/d/1hGeIBTflfuz2DQn9FuW4N2FonMlE_64tZdOSJFvIpP4/edit?gid=0#gid=0
